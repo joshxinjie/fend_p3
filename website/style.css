@@ -29,22 +29,23 @@ body{
 }
 
 #date{
-
+    font-size: 20 px;
 }
 
 #temp{
-
+    font-size: 20 px;
 }
 
 #content{
-
+    font-size: 20 px;
 }
 
 .headline {
 
 }
-.title{
 
+.title{
+    font-size: 27 px;
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */

@@ -28,3 +28,15 @@ const server = app.listen(port, listening);
 function listening() {
     console.log(`Server is running at http://localhost:${port}/`);
 };
+
+app.get('/getWeatherData', getWeatherData);
+function getWeatherData(request, response) {
+    console.log('Final Data: ', projectData);
+    response.send(projectData);
+};
+
+app.post('/addWeatherData', addWeatherData);
+function addWeatherData(request, response) {
+    console.log('Adding Data: ', request.body);
+    projectData = request.body;
+};
