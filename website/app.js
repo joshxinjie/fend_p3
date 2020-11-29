@@ -4,7 +4,7 @@ const API_KEY = "ee9644ed9115d0e3024939d94d6471c6";
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = d.getMonth()+1+'.'+ d.getDate()+'.'+ d.getFullYear();
 
 document.getElementById("generate").addEventListener("click", generateAction);
 
@@ -21,16 +21,20 @@ function generateAction(event) {
 };
 
 const getWeather = async(baseURL, zipCode, apiKey) => {
-    apiCallURL = `${baseURL}${zipCode}&appid=${API_KEY}&units=metric`;
+    if (zipCode.toString().length !== 5) {
+		alert("Please enter a valid 5 digit US zip code!");
+	} else {
+        apiCallURL = `${baseURL}${zipCode}&appid=${API_KEY}&units=metric`;
 
-    const request = await fetch(apiCallURL);
-    try {
         const request = await fetch(apiCallURL);
-        const data = await request.json();
-        console.log(data);
-        return data;
-    } catch(error) {
-        console.log("error", error);
+        try {
+            const request = await fetch(apiCallURL);
+            const data = await request.json();
+            console.log(data);
+            return data;
+        } catch(error) {
+            console.log("error", error);
+        }
     }
 };
 
