@@ -21,7 +21,7 @@ function generateAction(event) {
 };
 
 const getWeather = async(baseURL, zipCode, apiKey) => {
-    apiCallURL = `${baseURL}${zipCode}&appid=${API_KEY}`;
+    apiCallURL = `${baseURL}${zipCode}&appid=${API_KEY}&units=metric`;
 
     const request = await fetch(apiCallURL);
     try {
@@ -59,7 +59,7 @@ const updateUI = async() => {
     try {
         const allData = await request.json();
         document.getElementById('date').innerHTML = `Date: ${allData.date}`;
-        document.getElementById('temp').innerHTML = `Temperature: ${allData.temperature}`;
+        document.getElementById('temp').innerHTML = `Temperature: ${allData.temperature} °C`;
         document.getElementById('content').innerHTML = `Feelings: ${allData.userResponse}`;
     } catch(error) {
         console.log("error", error);

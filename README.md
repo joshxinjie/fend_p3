@@ -9,7 +9,7 @@ Install Node.js [here](https://nodejs.org/en/download/)
 In terminal, install the necessary Node.js packages, by running the following command in the project root directory:
 
 ```
-npm ci
+npm install
 ```
 
 In terminal, start the local server by running the following command in the project root directory:

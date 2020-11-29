@@ -1,0 +1,26 @@
+{
+  "name": "fend_p3",
+  "version": "1.0.0",
+  "description": "weather journal app",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshxinjie/fend_p3.git"
+  },
+  "author": "Xin Jie Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshxinjie/fend_p3/issues"
+  },
+  "homepage": "https://github.com/joshxinjie/fend_p3#readme"
+}
